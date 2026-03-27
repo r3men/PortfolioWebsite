@@ -21,7 +21,7 @@ export default function Nav() {
           href="/"
           className="font-mono text-green-400 text-sm tracking-widest uppercase hover:text-green-300 transition-colors"
         >
-          <span className="text-green-600">&gt; </span>YOUR_NAME
+          <span className="text-green-600">&gt; </span>Raymond Zhang
         </Link>
 
         {/* Links */}

@@ -11,17 +11,16 @@ import Link from "next/link";
 
 // ── Edit your skills here ────────────────────────────────────
 const skills = [
-  "Python", "C / C++", "Bash", "JavaScript",
-  "Reverse Engineering", "Binary Exploitation", "Web Security",
+  "Python", "Java", "C++", "Bash", "Web Security",
   "Cryptography", "Forensics", "Network Analysis",
-  "Linux", "Docker", "Git",
+  "Linux",
 ];
 
 // ── Edit your social / contact links here ───────────────────
 const socials = [
-  { label: "GitHub", href: "https://github.com/YOUR_USERNAME", icon: "gh" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/YOUR_USERNAME", icon: "li" },
-  { label: "CTFtime", href: "https://ctftime.org/user/YOUR_ID", icon: "ct" },
+  { label: "GitHub", href: "https://github.com/r3men", icon: "gh" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/raymond-zhang-273503390/", icon: "li" },
+  { label: "picoCTF", href: "https://play.picoctf.org/users/r3men", icon: "ct" },
 ];
 
 export default function Home() {
@@ -43,11 +42,11 @@ export default function Home() {
             <span className="text-green-700">&gt; </span>whoami
           </p>
           <h1 className="font-mono text-5xl md:text-7xl font-bold text-green-400 glow leading-none mb-4 cursor">
-            YOUR_NAME
+            Raymond Zhang
           </h1>
           <p className="font-mono text-lg md:text-xl text-green-600 tracking-wide mb-10">
             {/* ── Edit your title here ── */}
-            Security Researcher &amp; CTF Player
+            Aspiring SOC Analyst &amp; CTF Competitor
           </p>
         </div>
 
@@ -55,14 +54,10 @@ export default function Home() {
         <div className="fade-up fade-up-2 max-w-2xl space-y-4 text-green-200/80 leading-relaxed text-base mb-14">
           {/* ── Edit these paragraphs to describe yourself ── */}
           <p>
-            Hey — I&apos;m <span className="text-green-400 font-semibold">YOUR_NAME</span>, a
-            security-focused developer who loves breaking things apart to understand how they work.
-            I compete in CTF competitions and am passionate about low-level systems, cryptography,
-            and offensive security.
+            Welcome to my portfolio website! — I&apos;m <span className="text-green-400 font-semibold">Raymond Zhang</span>.
           </p>
           <p>
-            When I&apos;m not staring at a disassembler, I build tools, write scripts, and explore
-            everything at the intersection of software and security.
+            I am a passionate, attentive online detective aspiring to become a SOC Analyst. I am interested in maintaining system structure, stability and security through extensive log analysis. I have thorough knowledge of networks, cryptography, and ethical hacking with accompanying participation in hands-on labs.
           </p>
         </div>
 

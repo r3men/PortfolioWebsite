@@ -25,39 +25,30 @@ type CTFResult = {
 // ── ADD / EDIT YOUR CTF RESULTS HERE ────────────────────────
 const ctfResults: CTFResult[] = [
   {
-    competition: "picoCTF 2024",
-    team: "Team Name",
-    placement: "1st / 10,000",
-    score: 9850,
-    date: "March 2024",
-    href: "https://ctftime.org/event/XXXXX",
+    competition: "picoCTF 2025",
+    team: "flagsigmas",
+    placement: "773 / 10,000",
+    score: 3210,
+    date: "March 2025",
+    href: "https://play.picoctf.org/events/74/scoreboards",
+    highlight: false,
+  },
+  {
+    competition: "picoCTF 2026",
+    team: "mr hongs restaurant",
+    placement: "280 / 8747",
+    score: 13500,
+    date: "March 2026",
+    href: "https://play.picoctf.org/events/79/scoreboards",
     highlight: true,
   },
   {
-    competition: "UIUCTF 2024",
-    team: "Team Name",
-    placement: "34th / 800",
-    score: 3200,
-    date: "July 2024",
-    href: "https://ctftime.org/event/XXXXX",
-    highlight: false,
-  },
-  {
-    competition: "HTB Cyber Apocalypse 2024",
-    team: "Team Name",
-    placement: "78th / 5,000",
-    score: 14500,
-    date: "March 2024",
-    href: "https://ctftime.org/event/XXXXX",
-    highlight: false,
-  },
-  {
-    competition: "CSAW CTF 2023",
-    team: "Team Name",
-    placement: "12th / 1,200",
-    score: 4875,
-    date: "September 2023",
-    href: "https://ctftime.org/event/XXXXX",
+    competition: "Garden State CTF 2026",
+    team: "TRAC",
+    placement: "27 / 422",
+    score: 15325,
+    date: "Febr. 2026",
+    href: "",
     highlight: true,
   },
   // ── Paste a new result object here ──
@@ -81,14 +72,7 @@ export default function CTFPage() {
             CTF Rankings
           </h1>
           <p className="text-green-200/60 text-sm max-w-xl leading-relaxed">
-            Capture the Flag competition results. Add results by editing the{" "}
-            <code className="text-green-500 font-mono text-xs bg-green-950 px-1.5 py-0.5 rounded">
-              ctfResults
-            </code>{" "}
-            array in{" "}
-            <code className="text-green-500 font-mono text-xs bg-green-950 px-1.5 py-0.5 rounded">
-              app/ctf/page.tsx
-            </code>.
+            Here are some of the results from my most recent CTF competitions. I hope to continue participating in the coming years!
           </p>
         </div>
 

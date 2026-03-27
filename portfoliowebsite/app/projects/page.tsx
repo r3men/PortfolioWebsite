@@ -21,28 +21,28 @@ type Project = {
 // ── ADD / EDIT YOUR PROJECTS HERE ───────────────────────────
 const projects: Project[] = [
   {
-    title: "CTF Auto-Solver",
+    title: "Python Tools",
     description:
-      "A Python toolkit that automates common CTF challenge patterns — base encodings, XOR brute-force, padding oracle attacks, and more.",
-    tags: ["Python", "Cryptography", "Automation"],
-    href: "https://github.com/YOUR_USERNAME/ctf-solver",
-    status: "active",
-  },
-  {
-    title: "Binary Exploitation Framework",
-    description:
-      "Custom pwntools wrapper with scripted ROP chain generation and libc leak detection for pwn challenges.",
-    tags: ["Python", "pwntools", "Binary Exploitation"],
-    href: "https://github.com/YOUR_USERNAME/pwn-framework",
-    status: "complete",
-  },
-  {
-    title: "Network Traffic Analyzer",
-    description:
-      "CLI tool for parsing PCAP files and extracting credentials, flags, and interesting payloads from captured traffic.",
-    tags: ["Python", "Scapy", "Forensics"],
-    href: "https://github.com/YOUR_USERNAME/pcap-analyzer",
+      "A series of tools designed with Python, intended to automate specific tasks. Projects include a SIEM Log Parser, File Integrity Monitor, IP Log Analyzer, and a Port Scanner.", 
+    tags: ["Python", "Automation"],
+    href: "https://github.com/r3men/python-tools",
     status: "wip",
+  },
+  {
+    title: "CTF Writeups",
+    description:
+      "A repository dedicated to past CTF problems I have solved, designed for increased retention of prevalent topics in cybersecurity.",
+    tags: ["Python", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
+    href: "https://github.com/r3men/ctf-writeups",
+    status: "wip",
+  },
+  {
+    title: "Home Cyber Lab",
+    description:
+      "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities. This project has not been started yet, but it will continue to be worked on through the upcoming years.",
+    tags: ["Linux"],
+    href: "https://github.com/YOUR_USERNAME/pcap-analyzer",
+    status: "active",
   },
   // ── Paste a new project object here ──
 ];
@@ -68,11 +68,7 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-green-200/60 text-sm max-w-xl leading-relaxed">
-            Things I&apos;ve built, broken, and shipped. Add your own by editing the{" "}
-            <code className="text-green-500 font-mono text-xs bg-green-950 px-1.5 py-0.5 rounded">
-              projects
-            </code>{" "}
-            array in <code className="text-green-500 font-mono text-xs bg-green-950 px-1.5 py-0.5 rounded">app/projects/page.tsx</code>.
+            Here are some of the projects I have made or am currently working on. I'm always open to feedback and comments. Hope you enjoy!
           </p>
         </div>
 

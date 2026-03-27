@@ -19,40 +19,32 @@ type ContactMethod = {
 const contactMethods: ContactMethod[] = [
   {
     label: "Email",
-    value: "you@example.com",
-    href: "mailto:you@example.com",
+    value: "raymennoodles33@gmail.com",
+    href: "mailto:raymennoodles33@gmail.com",
     description: "Best for professional inquiries and collaborations.",
     highlight: true,
   },
   {
     label: "GitHub",
-    value: "github.com/YOUR_USERNAME",
-    href: "https://github.com/YOUR_USERNAME",
-    description: "Check out my code, open issues, or send a PR.",
+    value: "github.com/r3men",
+    href: "https://github.com/r3men",
+    description: "Check out some of my other projects!",
     highlight: false,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/YOUR_USERNAME",
-    href: "https://linkedin.com/in/YOUR_USERNAME",
-    description: "Connect with me professionally.",
+    value: "Raymond Zhang",
+    href: "https://www.linkedin.com/in/raymond-zhang-273503390/",
+    description: "Connect with me professionally, and explore some of my work experience.",
     highlight: false,
   },
   {
     label: "Discord",
-    value: "your_handle",
-    href: "",                              // leave empty if no link
-    description: "Find me in security / CTF Discord servers.",
+    value: "ramen3134",
+    href: "",                             
+    description: "Feel free to talk to me about all things cybersecurity and geography!",
     highlight: false,
   },
-  {
-    label: "CTFtime",
-    value: "ctftime.org/user/YOUR_ID",
-    href: "https://ctftime.org/user/YOUR_ID",
-    description: "My CTF competition profile and team history.",
-    highlight: false,
-  },
-  // ── Paste a new contact method here ──
 ];
 // ────────────────────────────────────────────────────────────
 
@@ -64,15 +56,14 @@ export default function ContactPage() {
         {/* ── Header ── */}
         <div className="fade-up fade-up-1 mb-14">
           <p className="font-mono text-green-700 text-xs tracking-widest uppercase mb-3">
-            <span className="text-green-600">&gt; </span>ping YOUR_NAME
+            <span className="text-green-600">&gt; </span>ping Raymond Zhang
           </p>
           <h1 className="font-mono text-4xl md:text-5xl font-bold text-green-400 glow mb-4">
             Get in Touch
           </h1>
           {/* ── Edit this blurb ── */}
           <p className="text-green-200/60 text-sm max-w-xl leading-relaxed">
-            I&apos;m always open to chatting about security research, CTF collaboration,
-            internships, or cool projects. Pick your preferred channel below.
+            I&apos;m always open to chatting about cybersecurity, CTFs, and geography. Feel free to contact me if you want to learn more about world cities, capitals, flags, or my personal favorite, GeoGuessr!
           </p>
         </div>
 
@@ -92,7 +83,7 @@ export default function ContactPage() {
             <StatusLine label="open to work" value="yes" ok />
             <StatusLine label="ctf active" value="yes" ok />
             <StatusLine label="response time" value="&lt; 48h" ok />
-            <StatusLine label="location" value="Your City, Country" ok={false} />
+            <StatusLine label="location" value="East Hanover, NJ" ok={false} />
           </div>
         </div>
 
