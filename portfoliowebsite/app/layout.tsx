@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Raymond Zhang | Portfolio",
   description: "Aspiring SOC Analyst, CTF Competitor, and developer.",
+  openGraph: {
+    images: ['/thumbnail.png'],
+  },
 };
 
 export default function RootLayout({
