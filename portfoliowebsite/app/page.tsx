@@ -11,9 +11,7 @@ import Link from "next/link";
 
 // ── Edit your skills here ────────────────────────────────────
 const skills = [
-  "Python", "Java", "C++", "Bash", "Web Security",
-  "Cryptography", "Forensics", "Network Analysis",
-  "Linux",
+  "Python", "Java", "C++", "Bash", "Wireshark", "Linux",
 ];
 
 // ── Edit your social / contact links here ───────────────────
