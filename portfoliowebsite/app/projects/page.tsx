@@ -23,8 +23,8 @@ const projects: Project[] = [
   {
     title: "Python Tools",
     description:
-      "A series of tools designed with Python, intended to automate specific tasks. Projects include a SIEM Log Parser, File Integrity Monitor, IP Log Analyzer, and a Port Scanner.", 
-    tags: ["Python", "Automation"],
+      "A series of tools designed with Python, intended to improve user quality-of-life.", 
+    tags: ["Python", "Quality of Life"],
     href: "https://github.com/r3men/python-tools",
     status: "wip",
   },
