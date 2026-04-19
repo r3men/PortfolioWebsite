@@ -51,6 +51,15 @@ const ctfResults: CTFResult[] = [
     href: "",
     highlight: true,
   },
+  {
+    competition: "Jersey CTF 2026",
+    team: "ramen",
+    placement: "45 / 397",
+    score: 11274,
+    date: "Apr. 2026",
+    href: "",
+    highlight: false,
+  },
   // ── Paste a new result object here ──
 ];
 // ────────────────────────────────────────────────────────────
