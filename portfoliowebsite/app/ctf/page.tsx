@@ -57,7 +57,16 @@ const ctfResults: CTFResult[] = [
     placement: "45 / 397",
     score: 11274,
     date: "Apr. 2026",
-    href: "",
+    href: "https://ctf.jerseyctf.com/scoreboard",
+    highlight: false,
+  },
+  {
+    competition: "UMDCTF 2026",
+    team: "Flag Sigmas",
+    placement: "60 / 763",
+    score: 1776,
+    date: "Apr. 2026",
+    href: "https://umdctf.io/scores",
     highlight: false,
   },
   // ── Paste a new result object here ──
