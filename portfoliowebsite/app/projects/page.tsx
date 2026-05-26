@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     title: "Python Tools",
     description:
-      "A series of tools designed with Python, intended to improve user quality-of-life.", 
+      "A series of tools designed with Python, intended to improve user quality-of-life. Tools include a decoding utility, an IOC extractor, and much more.", 
     tags: ["Python", "Quality of Life"],
     href: "https://github.com/r3men/python-tools",
     status: "wip",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. The application supports an admin and client panel, in which the admin panel is to be used by school administrators.",
     tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
-    href: "https://github.com/r3men/MCSTBusApp",
+    href: "https://mcstbusapp.vercel.app/",
     status: "complete",
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
     description:
       "A project designed for my final unit in Artificial Intelligence, utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a corresponding leaderboard to display rounds.",
     tags: ["Machine Learning", "PyTorch"],
-    href: "https://github.com/r3men/geoguessr-game",
+    href: "https://geoguessraivshuman.vercel.app/",
     status: "complete",
   },
   {
@@ -65,7 +65,7 @@ const projects: Project[] = [
     description:
       "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application features a pathway, login, careers, and survey page.",
     tags: ["TypeScript", "Tailwind", "Next.js"],
-    href: "https://github.com/amongsusman/InfoSTEM",
+    href: "https://info-stem.vercel.app/",
     status: "complete",
   },
   {
@@ -152,7 +152,7 @@ export default function ProjectsPage() {
                     rel="noopener noreferrer"
                     className="font-mono text-xs text-green-500 hover:text-green-300 border-b border-green-800 hover:border-green-500 w-fit transition-colors"
                   >
-                    View on GitHub ↗
+                    View Project ↗
                   </a>
                 )}
               </article>
