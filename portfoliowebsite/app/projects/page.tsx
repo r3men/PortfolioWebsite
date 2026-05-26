@@ -31,7 +31,7 @@ const projects: Project[] = [
     tags: ["Python", "Quality of Life"],
     href: "https://github.com/r3men/python-tools",
     live: "",
-    screenshot: "",
+    screenshot: "/python.png",
     status: "wip",
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     tags: ["Python", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
     href: "https://github.com/r3men/ctf-writeups",
     live: "",
-    screenshot: "",
+    screenshot: "/ctf.png",
     status: "wip",
   },
   {
@@ -51,7 +51,7 @@ const projects: Project[] = [
     tags: ["Linux"],
     href: "https://github.com/r3men/home-cyber-lab",
     live: "",
-    screenshot: "",
+    screenshot: "/kali.png",
     status: "wip",
   },
   {
@@ -61,7 +61,7 @@ const projects: Project[] = [
     tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
     href: "https://github.com/r3men/MCSTBusApp",
     live: "https://mcstbusapp.vercel.app/",
-    screenshot: "",
+    screenshot: "/mcstbusapp.png",
     status: "complete",
   },
   {
@@ -71,7 +71,7 @@ const projects: Project[] = [
     tags: ["Machine Learning", "PyTorch"],
     href: "https://github.com/r3men/geoguessr-game",
     live: "https://geoguessraivshuman.vercel.app/",
-    screenshot: "",
+    screenshot: "/ai.png",
     status: "complete",
   },
   {
@@ -81,7 +81,7 @@ const projects: Project[] = [
     tags: ["TypeScript", "Tailwind", "Next.js"],
     href: "https://github.com/amongsusman/InfoSTEM",
     live: "https://info-stem.vercel.app/",
-    screenshot: "",
+    screenshot: "/stem.png",
     status: "complete",
   },
   {
@@ -91,7 +91,7 @@ const projects: Project[] = [
     tags: ["Java", "OOP"],
     href: "https://github.com/r3men/JavaPortfolioProject",
     live: "",
-    screenshot: "",
+    screenshot: "/java.png",
     status: "complete",
   },
 ];
