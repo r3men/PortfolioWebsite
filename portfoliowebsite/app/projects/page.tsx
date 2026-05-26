@@ -6,7 +6,9 @@
 //     - title:       Project name
 //     - description: Short summary (1–2 sentences)
 //     - tags:        Array of tech/topic tags
-//     - href:        GitHub or live demo URL (or "" to hide link)
+//     - href:        GitHub URL (or "" to hide)
+//     - live:        Live website URL (or "" to hide)
+//     - screenshot:  Path to image in /public (or "" to hide)
 //     - status:      "active" | "complete" | "wip"
 // ============================================================
 
@@ -15,6 +17,8 @@ type Project = {
   description: string;
   tags: string[];
   href: string;
+  live: string;
+  screenshot: string;
   status: "active" | "complete" | "wip";
 };
 
@@ -23,9 +27,11 @@ const projects: Project[] = [
   {
     title: "Python Tools",
     description:
-      "A series of tools designed with Python, intended to improve user quality-of-life. Tools include a decoding utility, an IOC extractor, and much more.", 
+      "A series of tools designed with Python, intended to improve user quality-of-life. Tools include a decoding utility, an IOC extractor, and much more.",
     tags: ["Python", "Quality of Life"],
     href: "https://github.com/r3men/python-tools",
+    live: "",
+    screenshot: "",
     status: "wip",
   },
   {
@@ -34,6 +40,8 @@ const projects: Project[] = [
       "A repository dedicated to past CTF problems I have solved, designed for increased retention of prevalent topics in cybersecurity.",
     tags: ["Python", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
     href: "https://github.com/r3men/ctf-writeups",
+    live: "",
+    screenshot: "",
     status: "wip",
   },
   {
@@ -42,48 +50,57 @@ const projects: Project[] = [
       "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities. This project has not been started yet, but it will continue to be worked on through the upcoming years.",
     tags: ["Linux"],
     href: "https://github.com/r3men/home-cyber-lab",
+    live: "",
+    screenshot: "",
     status: "wip",
   },
   {
     title: "MCST Bus App",
     description:
-      "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. The application supports an admin and client panel, in which the admin panel is to be used by school administrators.",
+      "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. Supports an admin and client panel.",
     tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
     href: "https://github.com/r3men/MCSTBusApp",
+    live: "https://mcstbusapp.vercel.app/",
+    screenshot: "",
     status: "complete",
   },
   {
     title: "GeoGuessr: Human vs. AI",
     description:
-      "A project designed for my final unit in Artificial Intelligence, utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a corresponding leaderboard to display rounds.",
+      "A project utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a leaderboard.",
     tags: ["Machine Learning", "PyTorch"],
     href: "https://github.com/r3men/geoguessr-game",
+    live: "https://geoguessraivshuman.vercel.app/",
+    screenshot: "",
     status: "complete",
   },
   {
     title: "InfoSTEM",
     description:
-      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application features a pathway, login, careers, and survey page.",
+      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Features a pathway, login, careers, and survey page.",
     tags: ["TypeScript", "Tailwind", "Next.js"],
     href: "https://github.com/amongsusman/InfoSTEM",
+    live: "https://info-stem.vercel.app/",
+    screenshot: "",
     status: "complete",
   },
   {
     title: "Geo-Tracker Simulator",
     description:
-      "A terminal-based simulator game for geography enthusiasts and cybersecurity lovers. Game was built using OOP principles, loops, arrays, methods, etc.",
+      "A terminal-based simulator game for geography enthusiasts and cybersecurity lovers. Built using OOP principles, loops, arrays, methods, etc.",
     tags: ["Java", "OOP"],
     href: "https://github.com/r3men/JavaPortfolioProject",
+    live: "",
+    screenshot: "",
     status: "complete",
-  }
-  // ── Paste a new project object here ──
+  },
 ];
 // ────────────────────────────────────────────────────────────
 
 const statusConfig = {
-  active:   { label: "ACTIVE",    color: "text-green-400 border-green-700 bg-green-950/50" },
-  complete: { label: "COMPLETE",  color: "text-cyan-400  border-cyan-800  bg-cyan-950/50"  },
-  wip:      { label: "WIP",       color: "text-yellow-400 border-yellow-800 bg-yellow-950/50" },
+  active:   { label: "ACTIVE",   color: "text-green-400 border-green-700 bg-green-950/50" },
+  complete: { label: "COMPLETE", color: "text-cyan-400 border-cyan-800 bg-cyan-950/50" },
+  wip:      { label: "WIP",      color: "text-yellow-400 border-yellow-800 bg-yellow-950/50" },
 };
 
 export default function ProjectsPage() {
@@ -100,61 +117,87 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-green-200/60 text-sm max-w-xl leading-relaxed">
-            Here are some of the projects I have made or am currently working on. I'm always open to feedback and comments. Hope you enjoy!
+            Here are some of the projects I have made or am currently working on. I&apos;m always open to feedback and comments. Hope you enjoy!
           </p>
         </div>
 
         {/* ── Project grid ── */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project, i) => {
             const s = statusConfig[project.status];
             return (
               <article
                 key={project.title}
-                className={`fade-up fade-up-${Math.min(i + 2, 5)} card-glow flex flex-col gap-4 border border-green-900/60 rounded-lg p-6 bg-black/40 backdrop-blur-sm`}
+                className={`fade-up fade-up-${Math.min(i + 2, 5)} card-glow flex flex-col border border-green-900/60 rounded-lg bg-black/40 backdrop-blur-sm overflow-hidden`}
               >
-                {/* Status badge */}
-                <div className="flex items-center justify-between">
-                  <span
-                    className={`font-mono text-xs border rounded px-2 py-0.5 ${s.color}`}
-                  >
-                    {s.label}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h2 className="font-mono text-base font-semibold text-green-300 leading-snug">
-                  {project.title}
-                </h2>
-
-                {/* Description */}
-                <p className="text-green-200/60 text-sm leading-relaxed flex-1">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-mono text-xs text-green-600 bg-green-950/60 rounded px-2 py-0.5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Link */}
-                {project.href && (
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-xs text-green-500 hover:text-green-300 border-b border-green-800 hover:border-green-500 w-fit transition-colors"
-                  >
-                    View GitHub ↗
-                  </a>
+                {/* Screenshot */}
+                {project.screenshot ? (
+                  <div className="w-full bg-green-950/20 border-b border-green-900/40 overflow-hidden" style={{ height: "180px" }}>
+                    <img
+                      src={project.screenshot}
+                      alt={`${project.title} screenshot`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full bg-green-950/10 border-b border-green-900/40 flex items-center justify-center" style={{ height: "120px" }}>
+                    <span className="font-mono text-green-900 text-xs tracking-widest">no preview</span>
+                  </div>
                 )}
+
+                {/* Content */}
+                <div className="flex flex-col gap-3 p-5 flex-1">
+                  {/* Status + title row */}
+                  <div className="flex items-center gap-3">
+                    <span className={`font-mono text-xs border rounded px-2 py-0.5 flex-shrink-0 ${s.color}`}>
+                      {s.label}
+                    </span>
+                    <h2 className="font-mono text-sm font-semibold text-green-300 leading-snug">
+                      {project.title}
+                    </h2>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-green-200/60 text-sm leading-relaxed flex-1">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-xs text-green-600 bg-green-950/60 rounded px-2 py-0.5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex items-center gap-4 pt-1">
+                    {project.href && (
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-green-500 hover:text-green-300 border-b border-green-800 hover:border-green-500 transition-colors"
+                      >
+                        View GitHub &#8599;
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-cyan-500 hover:text-cyan-300 border-b border-cyan-800 hover:border-cyan-500 transition-colors"
+                      >
+                        Live Site &#8599;
+                      </a>
+                    )}
+                  </div>
+                </div>
               </article>
             );
           })}
