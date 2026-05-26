@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. The application supports an admin and client panel, in which the admin panel is to be used by school administrators.",
     tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
-    href: "https://mcstbusapp.vercel.app/",
+    href: "https://github.com/r3men/MCSTBusApp",
     status: "complete",
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
     description:
       "A project designed for my final unit in Artificial Intelligence, utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a corresponding leaderboard to display rounds.",
     tags: ["Machine Learning", "PyTorch"],
-    href: "https://geoguessraivshuman.vercel.app/",
+    href: "https://github.com/r3men/geoguessr-game",
     status: "complete",
   },
   {
@@ -65,7 +65,7 @@ const projects: Project[] = [
     description:
       "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application features a pathway, login, careers, and survey page.",
     tags: ["TypeScript", "Tailwind", "Next.js"],
-    href: "https://info-stem.vercel.app/",
+    href: "https://github.com/amongsusman/InfoSTEM",
     status: "complete",
   },
   {
@@ -152,7 +152,7 @@ export default function ProjectsPage() {
                     rel="noopener noreferrer"
                     className="font-mono text-xs text-green-500 hover:text-green-300 border-b border-green-800 hover:border-green-500 w-fit transition-colors"
                   >
-                    View Project ↗
+                    View GitHub ↗
                   </a>
                 )}
               </article>
