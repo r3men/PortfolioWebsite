@@ -17,7 +17,7 @@ type ContactMethod = {
 };
 
 // ── EDIT YOUR RESUME LINK HERE ───────────────────────────────
-const RESUME_URL = "/resume.pdf"; // or an external link, e.g. "https://..."
+const RESUME_URL = "/Resume.pdf"; // or an external link, e.g. "https://..."
 const RESUME_LAST_UPDATED = "May 2025"; // update this whenever you upload a new version
 // ────────────────────────────────────────────────────────────
 
