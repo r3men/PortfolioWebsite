@@ -41,9 +41,41 @@ const projects: Project[] = [
     description:
       "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities. This project has not been started yet, but it will continue to be worked on through the upcoming years.",
     tags: ["Linux"],
-    href: "https://github.com/YOUR_USERNAME/pcap-analyzer",
-    status: "active",
+    href: "https://github.com/r3men/home-cyber-lab",
+    status: "wip",
   },
+  {
+    title: "MCST Bus App",
+    description:
+      "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. The application supports an admin and client panel, in which the admin panel is to be used by school administrators.",
+    tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
+    href: "https://github.com/r3men/MCSTBusApp",
+    status: "complete",
+  },
+  {
+    title: "GeoGuessr: Human vs. AI",
+    description:
+      "A project designed for my final unit in Artificial Intelligence, utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a corresponding leaderboard to display rounds.",
+    tags: ["Machine Learning", "PyTorch"],
+    href: "https://github.com/r3men/geoguessr-game",
+    status: "complete",
+  },
+  {
+    title: "InfoSTEM",
+    description:
+      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application features a pathway, login, careers, and survey page.",
+    tags: ["TypeScript", "Tailwind", "Next.js"],
+    href: "https://github.com/amongsusman/InfoSTEM",
+    status: "complete",
+  },
+  {
+    title: "Geo-Tracker Simulator",
+    description:
+      "A terminal-based simulator game for geography enthusiasts and cybersecurity lovers. Game was built using OOP principles, loops, arrays, methods, etc.",
+    tags: ["Java", "OOP"],
+    href: "https://github.com/r3men/JavaPortfolioProject",
+    status: "complete",
+  }
   // ── Paste a new project object here ──
 ];
 // ────────────────────────────────────────────────────────────

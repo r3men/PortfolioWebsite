@@ -37,14 +37,7 @@ const contactMethods: ContactMethod[] = [
     href: "https://www.linkedin.com/in/raymond-zhang-273503390/",
     description: "Connect with me professionally, and explore some of my work experience.",
     highlight: false,
-  },
-  {
-    label: "Discord",
-    value: "ramen3134",
-    href: "",                             
-    description: "Feel free to talk to me about all things cybersecurity and geography!",
-    highlight: false,
-  },
+  }
 ];
 // ────────────────────────────────────────────────────────────
 
