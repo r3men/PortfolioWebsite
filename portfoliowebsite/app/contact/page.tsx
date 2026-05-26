@@ -10,7 +10,7 @@ type ContactMethod = {
   highlight: boolean;
 };
 
-const RESUME_URL = "/Resume.pdf";
+const RESUME_URL = "/Resume.pdf#toolbar=0&navpanes=0&scrollbar=0";
 const RESUME_LAST_UPDATED = "May 2025";
 
 const contactMethods: ContactMethod[] = [
