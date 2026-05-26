@@ -88,12 +88,12 @@ export default function ContactPage() {
                   last updated: {"May 2025"}
                 </span>
               </div>
-              
+              <a
                 href={"/resume.pdf"}
                 download
                 className="font-mono text-xs text-green-600 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
               >
-                ↓ download
+                <span>&#8595; download</span>
               </a>
             </div>
 
@@ -146,7 +146,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
           {m.label}
           {m.highlight && (
             <span className="ml-2 text-green-500 normal-case tracking-normal">
-              ← preferred
+              &#8592; preferred
             </span>
           )}
         </span>
@@ -163,7 +163,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
       </p>
       {m.href && (
         <span className="font-mono text-xs text-green-600 group-hover:text-green-400 transition-colors w-fit border-b border-green-800">
-          Open ↗
+          Open &#8599;
         </span>
       )}
     </div>
@@ -171,7 +171,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
 
   if (m.href) {
     return (
-      
+      <a
         href={m.href}
         target={m.href.startsWith("mailto") ? undefined : "_blank"}
         rel="noopener noreferrer"
