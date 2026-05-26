@@ -5,6 +5,7 @@
 //   1. Update the `contactMethods` array with your real links
 //   2. Update the bio blurb at the top
 //   3. Set your preferred contact to highlight: true
+//   4. Update RESUME_URL with your actual resume link/file path
 // ============================================================
 
 type ContactMethod = {
@@ -14,6 +15,11 @@ type ContactMethod = {
   description: string;
   highlight: boolean;
 };
+
+// ── EDIT YOUR RESUME LINK HERE ───────────────────────────────
+const RESUME_URL = "/resume.pdf"; // or an external link, e.g. "https://..."
+const RESUME_LAST_UPDATED = "May 2025"; // update this whenever you upload a new version
+// ────────────────────────────────────────────────────────────
 
 // ── EDIT YOUR CONTACT METHODS HERE ──────────────────────────
 const contactMethods: ContactMethod[] = [
@@ -37,7 +43,7 @@ const contactMethods: ContactMethod[] = [
     href: "https://www.linkedin.com/in/raymond-zhang-273503390/",
     description: "Connect with me professionally, and explore some of my work experience.",
     highlight: false,
-  }
+  },
 ];
 // ────────────────────────────────────────────────────────────
 
@@ -54,7 +60,6 @@ export default function ContactPage() {
           <h1 className="font-mono text-4xl md:text-5xl font-bold text-green-400 glow mb-4">
             Get in Touch
           </h1>
-          {/* ── Edit this blurb ── */}
           <p className="text-green-200/60 text-sm max-w-xl leading-relaxed">
             I&apos;m always open to chatting about cybersecurity, CTFs, and geography. Feel free to contact me if you want to learn more about world cities, capitals, flags, or my personal favorite, GeoGuessr!
           </p>
@@ -67,8 +72,45 @@ export default function ContactPage() {
           ))}
         </div>
 
+        {/* ── Resume section ── */}
+        <div className="fade-up fade-up-3 mb-16">
+          <p className="font-mono text-green-700 text-xs tracking-widest uppercase mb-4">
+            <span className="text-green-600">&gt; </span>cat resume.pdf
+          </p>
+          <div className="border border-green-900/40 rounded-lg bg-black/40 backdrop-blur-sm overflow-hidden">
+            {/* Header bar */}
+            <div className="flex items-center justify-between px-5 py-3 border-b border-green-900/40 bg-green-950/20">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-green-400 text-xs tracking-widest uppercase">
+                  resume
+                </span>
+                <span className="font-mono text-green-700 text-xs">
+                  last updated: {"May 2025"}
+                </span>
+              </div>
+              
+                href={"/resume.pdf"}
+                download
+                className="font-mono text-xs text-green-600 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
+              >
+                ↓ download
+              </a>
+            </div>
+
+            {/* Inline PDF viewer */}
+            <div className="w-full" style={{ height: "680px" }}>
+              <iframe
+                src={RESUME_URL}
+                title="Resume"
+                className="w-full h-full"
+                style={{ border: "none" }}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* ── Terminal-style status block ── */}
-        <div className="fade-up fade-up-3 border border-green-900/40 rounded-lg p-6 bg-black/40 font-mono text-sm max-w-lg">
+        <div className="fade-up fade-up-4 border border-green-900/40 rounded-lg p-6 bg-black/40 font-mono text-sm max-w-lg">
           <p className="text-green-700 text-xs tracking-widest uppercase mb-4">
             system status
           </p>
@@ -129,7 +171,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
 
   if (m.href) {
     return (
-      <a
+      
         href={m.href}
         target={m.href.startsWith("mailto") ? undefined : "_blank"}
         rel="noopener noreferrer"
