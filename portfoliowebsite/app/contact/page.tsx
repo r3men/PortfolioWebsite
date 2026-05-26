@@ -1,12 +1,6 @@
-// ============================================================
-// CONTACT PAGE
-// ============================================================
-// TO CUSTOMIZE:
-//   1. Update the `contactMethods` array with your real links
-//   2. Update the bio blurb at the top
-//   3. Set your preferred contact to highlight: true
-//   4. Update RESUME_URL with your actual resume link/file path
-// ============================================================
+"use client";
+
+import { useState } from "react";
 
 type ContactMethod = {
   label: string;
@@ -16,12 +10,9 @@ type ContactMethod = {
   highlight: boolean;
 };
 
-// ── EDIT YOUR RESUME LINK HERE ───────────────────────────────
-const RESUME_URL = "/Resume.pdf"; // or an external link, e.g. "https://..."
-const RESUME_LAST_UPDATED = "May 2025"; // update this whenever you upload a new version
-// ────────────────────────────────────────────────────────────
+const RESUME_URL = "/Resume.pdf";
+const RESUME_LAST_UPDATED = "May 2025";
 
-// ── EDIT YOUR CONTACT METHODS HERE ──────────────────────────
 const contactMethods: ContactMethod[] = [
   {
     label: "Email",
@@ -45,14 +36,14 @@ const contactMethods: ContactMethod[] = [
     highlight: false,
   },
 ];
-// ────────────────────────────────────────────────────────────
 
 export default function ContactPage() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   return (
     <div className="min-h-screen grid-bg">
       <div className="max-w-5xl mx-auto px-6 py-20">
 
-        {/* ── Header ── */}
         <div className="fade-up fade-up-1 mb-14">
           <p className="font-mono text-green-700 text-xs tracking-widest uppercase mb-3">
             <span className="text-green-600">&gt; </span>ping Raymond Zhang
@@ -65,31 +56,28 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* ── Contact cards ── */}
         <div className="fade-up fade-up-2 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-16">
           {contactMethods.map((method) => (
             <ContactCard key={method.label} method={method} />
           ))}
         </div>
 
-        {/* ── Resume section ── */}
         <div className="fade-up fade-up-3 mb-16">
           <p className="font-mono text-green-700 text-xs tracking-widest uppercase mb-4">
             <span className="text-green-600">&gt; </span>cat resume.pdf
           </p>
           <div className="border border-green-900/40 rounded-lg bg-black/40 backdrop-blur-sm overflow-hidden">
-            {/* Header bar */}
             <div className="flex items-center justify-between px-5 py-3 border-b border-green-900/40 bg-green-950/20">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-green-400 text-xs tracking-widest uppercase">
                   resume
                 </span>
                 <span className="font-mono text-green-700 text-xs">
-                  last updated: {"May 2025"}
+                  last updated: {RESUME_LAST_UPDATED}
                 </span>
               </div>
               <a
-                href={"/Resume.pdf"}
+                href={RESUME_URL}
                 download
                 className="font-mono text-xs text-green-600 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
               >
@@ -97,37 +85,87 @@ export default function ContactPage() {
               </a>
             </div>
 
-            {/* Inline PDF viewer */}
-            <div className="w-full" style={{ height: "680px" }}>
+            <div
+              onClick={() => setLightboxOpen(true)}
+              className="group relative cursor-zoom-in overflow-hidden bg-black/60"
+              style={{ height: "480px" }}
+            >
               <iframe
                 src={RESUME_URL}
-                title="Resume"
-                className="w-full h-full"
+                title="Resume Preview"
+                className="w-full h-full pointer-events-none"
                 style={{ border: "none" }}
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                <span className="font-mono text-xs text-green-400 border border-green-600 rounded px-4 py-2 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  click to expand
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* ── Terminal-style status block ── */}
-        <div className="fade-up fade-up-4 border border-green-900/40 rounded-lg p-6 bg-black/40 font-mono text-sm max-w-lg">
-          <p className="text-green-700 text-xs tracking-widest uppercase mb-4">
-            system status
-          </p>
-          <div className="space-y-2">
-            <StatusLine label="open to work" value="yes" ok />
-            <StatusLine label="ctf active" value="yes" ok />
-            <StatusLine label="response time" value="&lt; 48h" ok />
-            <StatusLine label="location" value="East Hanover, NJ" ok={false} />
+        <div className="fade-up fade-up-4 border border-green-900/40 rounded-lg bg-black/40 font-mono text-sm overflow-hidden">
+          <div className="px-5 py-3 border-b border-green-900/40 bg-green-950/20">
+            <p className="text-green-700 text-xs tracking-widest uppercase">
+              system status
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y divide-green-900/30">
+            <StatusTile label="open to work" value="yes" ok />
+            <StatusTile label="ctf active" value="yes" ok />
+            <StatusTile label="response time" value="&lt; 48h" ok />
+            <StatusTile label="location" value="East Hanover, NJ" ok={false} />
           </div>
         </div>
 
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10"
+          style={{ backgroundColor: "rgba(0,0,0,0.85)" }}
+          onClick={() => setLightboxOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl rounded-lg overflow-hidden border border-green-900/40 shadow-2xl"
+            style={{ height: "90vh" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-5 py-3 border-b border-green-900/40 bg-black/90">
+              <span className="font-mono text-green-400 text-xs tracking-widest uppercase">
+                resume.pdf
+              </span>
+              <div className="flex items-center gap-3">
+                <a
+                  href={RESUME_URL}
+                  download
+                  className="font-mono text-xs text-green-600 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
+                >
+                  <span>&#8595; download</span>
+                </a>
+                <button
+                  onClick={() => setLightboxOpen(false)}
+                  className="font-mono text-xs text-green-700 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
+                >
+                  &#x2715; close
+                </button>
+              </div>
+            </div>
+            <iframe
+              src={RESUME_URL}
+              title="Resume"
+              className="w-full"
+              style={{ height: "calc(90vh - 48px)", border: "none" }}
+            />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
 
-// ── Contact card component ───────────────────────────────────
 function ContactCard({ method: m }: { method: ContactMethod }) {
   const inner = (
     <div
@@ -151,11 +189,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
           )}
         </span>
       </div>
-      <p
-        className={`font-mono text-sm break-all ${
-          m.highlight ? "text-green-300" : "text-green-500"
-        }`}
-      >
+      <p className={`font-mono text-sm break-all ${m.highlight ? "text-green-300" : "text-green-500"}`}>
         {m.value}
       </p>
       <p className="text-green-200/50 text-xs leading-relaxed flex-1">
@@ -184,8 +218,7 @@ function ContactCard({ method: m }: { method: ContactMethod }) {
   return <div className="h-full">{inner}</div>;
 }
 
-// ── Status line component ────────────────────────────────────
-function StatusLine({
+function StatusTile({
   label,
   value,
   ok,
@@ -195,15 +228,12 @@ function StatusLine({
   ok: boolean;
 }) {
   return (
-    <div className="flex items-center justify-between gap-4">
-      <span className="text-green-700 text-xs">{label}</span>
-      <div className="flex-1 border-b border-green-900/40 border-dashed" />
+    <div className="flex flex-col gap-2 px-5 py-4">
+      <span className="text-green-700 text-xs tracking-widest uppercase">{label}</span>
       <div className="flex items-center gap-2">
+        <span className={`h-1.5 w-1.5 rounded-full flex-shrink-0 ${ok ? "bg-green-400" : "bg-yellow-400"}`} />
         <span
-          className={`h-1.5 w-1.5 rounded-full ${ok ? "bg-green-400" : "bg-yellow-400"}`}
-        />
-        <span
-          className={`text-xs font-mono ${ok ? "text-green-400" : "text-yellow-400"}`}
+          className={`text-sm font-mono ${ok ? "text-green-400" : "text-yellow-400"}`}
           dangerouslySetInnerHTML={{ __html: value }}
         />
       </div>
