@@ -89,7 +89,7 @@ export default function ContactPage() {
                 </span>
               </div>
               <a
-                href={"/resume.pdf"}
+                href={"/Resume.pdf"}
                 download
                 className="font-mono text-xs text-green-600 hover:text-green-400 transition-colors border border-green-900/60 hover:border-green-700 rounded px-3 py-1"
               >
