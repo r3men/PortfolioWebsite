@@ -16,8 +16,8 @@ const RESUME_LAST_UPDATED = "May 2025";
 const contactMethods: ContactMethod[] = [
   {
     label: "Email",
-    value: "raymennoodles33@gmail.com",
-    href: "mailto:raymennoodles33@gmail.com",
+    value: "raymondzhangwork@gmail.com",
+    href: "mailto:raymondzhangwork@gmail.com",
     description: "Best for professional inquiries and collaborations.",
     highlight: true,
   },
