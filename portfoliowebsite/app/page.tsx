@@ -11,7 +11,7 @@ import Link from "next/link";
 
 // ── Edit your skills here ────────────────────────────────────
 const skills = [
-  "Python", "Java", "C++", "Bash", "Wireshark",
+  "Python", "Java", "C++", "TypeScript", "Bash", "Wireshark", "Next.js", "PyTorch",
 ];
 
 // ── Edit your social / contact links here ───────────────────
