@@ -55,7 +55,7 @@ export default function Home() {
             Welcome to my portfolio website! — I&apos;m <span className="text-green-400 font-semibold">Raymond Zhang</span>.
           </p>
           <p>
-            I am a passionate, attentive online detective aspiring to become a SOC Analyst. I am interested in maintaining system structure, stability, and security through extensive log analysis. I have foundational knowledge of networks, cryptography, and ethical hacking with accompanying participation in hands-on labs.
+            I am a passionate, attentive online detective aspiring to become a SOC Analyst. I am interested in maintaining system structure, stability, and security through extensive log analysis. I have foundational knowledge of networks, cryptography, and ethical hacking with accompanying participation in hands-on labs. Additionally, I enjoy software development, building purposeful AI-assisted projects using TypeScript and Next.js mainly to deploy web applications. As artificial intelligence becomes more prevalent in the workplace, I hope to leverage its capabilities to increase output and development efficiency. Whether it be cybersecurity or software development, I am always open to new opportunities that give me a chance to develop professionally! 
           </p>
         </div>
 
