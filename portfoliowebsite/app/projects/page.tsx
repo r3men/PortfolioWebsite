@@ -18,6 +18,7 @@ type Project = {
   tags: string[];
   href: string;
   live: string;
+  writeup: string;
   screenshot: string;
   status: "active" | "complete" | "wip";
 };
@@ -33,6 +34,7 @@ const projects: Project[] = [
     live: "",
     screenshot: "/python.png",
     status: "wip",
+    writeup: "",
   },
   {
     title: "CTF Writeups",
@@ -43,16 +45,18 @@ const projects: Project[] = [
     live: "",
     screenshot: "/ctf.png",
     status: "wip",
+    writeup: "",
   },
   {
     title: "Home Cyber Lab",
     description:
       "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities, increasing individual understanding of attack vectors, common threats, and operating systems.",
-    tags: ["Linux, Exploration", "OS"],
+    tags: ["Linux", "Exploration", "OS"],
     href: "https://github.com/r3men/home-cyber-lab",
     live: "",
     screenshot: "/kali.png",
     status: "wip",
+    writeup: "",
   },
   {
     title: "MCST Bus App",
@@ -63,6 +67,7 @@ const projects: Project[] = [
     live: "https://mcstbusapp.vercel.app/",
     screenshot: "/mcstbusapp.png",
     status: "complete",
+    writeup: "",
   },
   {
     title: "GeoGuessr: Human vs. AI",
@@ -73,6 +78,7 @@ const projects: Project[] = [
     live: "https://geoguessraivshuman.vercel.app/",
     screenshot: "/ai.png",
     status: "complete",
+    writeup: "",
   },
   {
     title: "InfoSTEM",
@@ -83,6 +89,7 @@ const projects: Project[] = [
     live: "https://info-stem.vercel.app/",
     screenshot: "/stem.png",
     status: "complete",
+    writeup: "",
   },
   {
     title: "Geo-Tracker Simulator",
@@ -93,6 +100,7 @@ const projects: Project[] = [
     live: "",
     screenshot: "/java.png",
     status: "complete",
+    writeup: "",
   },
 ];
 // ────────────────────────────────────────────────────────────
@@ -194,6 +202,16 @@ export default function ProjectsPage() {
                         className="font-mono text-xs text-cyan-500 hover:text-cyan-300 border-b border-cyan-800 hover:border-cyan-500 transition-colors"
                       >
                         Live Site &#8599;
+                      </a>
+                    )}
+                    {project.writeup && (
+                      <a
+                        href={project.writeup}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-purple-500 hover:text-purple-300 border-b border-purple-800 hover:border-purple-500 transition-colors"
+                      >
+                        Writeup &#8599;
                       </a>
                     )}
                   </div>
