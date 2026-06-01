@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "CTF Writeups",
     description:
       "A repository dedicated to past CTF problems I have solved, designed for increased retention of prevalent topics in cybersecurity.",
-    tags: ["Python", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
+    tags: ["Python", "Exploration", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
     href: "https://github.com/r3men/ctf-writeups",
     live: "",
     screenshot: "/ctf.png",
@@ -47,8 +47,8 @@ const projects: Project[] = [
   {
     title: "Home Cyber Lab",
     description:
-      "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities. This project has not been started yet, but it will continue to be worked on through the upcoming years.",
-    tags: ["Linux"],
+      "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities, increasing individual understanding of attack vectors, common threats, and operating systems.",
+    tags: ["Linux, Exploration", "OS"],
     href: "https://github.com/r3men/home-cyber-lab",
     live: "",
     screenshot: "/kali.png",
@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     title: "MCST Bus App",
     description:
-      "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. Supports an admin and client panel.",
+      "A web application designed to ease students trying to find their buses at dismissal at the Morris County School of Technology. School administrators are able to assign buses through a designated admin panel, while students can view bus assignments through the client panel.",
     tags: ["TypeScript", "Tailwind", "Next.js", "Quality of Life"],
     href: "https://github.com/r3men/MCSTBusApp",
     live: "https://mcstbusapp.vercel.app/",
@@ -67,7 +67,7 @@ const projects: Project[] = [
   {
     title: "GeoGuessr: Human vs. AI",
     description:
-      "A project utilizing a Kaggle dataset of GeoGuessr images to correctly predict the country of origin of an input photo. Supports competition between users and AI with a leaderboard.",
+      "A deep learning image classifier built with PyTorch that predicts which of four countries (United States, Japan, Brazil, and Russia) an image was taken in. Model is served via a FastAPI endpoint that returns model predictions and a saliency map allowing users to visualize noteworthy image regions.",
     tags: ["Machine Learning", "PyTorch"],
     href: "https://github.com/r3men/geoguessr-game",
     live: "https://geoguessraivshuman.vercel.app/",
@@ -77,7 +77,7 @@ const projects: Project[] = [
   {
     title: "InfoSTEM",
     description:
-      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Features a pathway, login, careers, and survey page.",
+      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application allows users to access a corresponding pathway based on their recommended career.",
     tags: ["TypeScript", "Tailwind", "Next.js"],
     href: "https://github.com/amongsusman/InfoSTEM",
     live: "https://info-stem.vercel.app/",
