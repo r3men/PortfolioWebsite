@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     title: "Python Tools",
     description:
-      "A series of tools designed with Python, intended to improve user quality-of-life. Tools include a decoding utility, an IOC extractor, and much more.",
+      "A series of tools designed with Python, intended to improve user quality-of-life. Scripts are meant to offload manual tasks through increased automation capabilities. Tools include a decoding utility, an IOC extractor, and much more.",
     tags: ["Python", "Quality of Life"],
     href: "https://github.com/r3men/python-tools",
     live: "",
@@ -39,7 +39,7 @@ const projects: Project[] = [
   {
     title: "CTF Writeups",
     description:
-      "A repository dedicated to past CTF problems I have solved, designed for increased retention of prevalent topics in cybersecurity.",
+      "A repository dedicated to past CTF problems I have solved, designed for increased retention of prevalent topics in cybersecurity. Topics range from Binary Exploitation to OSINT, encompassing a variety of strategies and approaches to different problems.",
     tags: ["Python", "Exploration", "Reverse Engineering", "Cryptography", "Web Security", "OSINT", "Binary Exploitation"],
     href: "https://github.com/r3men/ctf-writeups",
     live: "",
@@ -50,7 +50,7 @@ const projects: Project[] = [
   {
     title: "Home Cyber Lab",
     description:
-      "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities, increasing individual understanding of attack vectors, common threats, and operating systems.",
+      "A VirtualBox Lab designed to test and explore a multitude of vulnerabilities, increasing individual understanding of attack vectors, common threats, and operating systems. (PS: This project has not been started as of June 2, 2026)",
     tags: ["Linux", "Exploration", "OS"],
     href: "https://github.com/r3men/home-cyber-lab",
     live: "",
@@ -72,8 +72,8 @@ const projects: Project[] = [
   {
     title: "GeoGuessr: Human vs. AI",
     description:
-      "A deep learning image classifier built with PyTorch that predicts which of four countries (United States, Japan, Brazil, and Russia) an image was taken in. Model is served via a FastAPI endpoint that returns model predictions and a saliency map allowing users to visualize noteworthy image regions.",
-    tags: ["Machine Learning", "PyTorch"],
+      "A deep learning image classifier built with PyTorch that predicts which of four countries (United States, Japan, Brazil, and Russia) an image was taken in. Project serves as a test to the image-recognition capabilities of neural networks. Model is served via a FastAPI endpoint that returns model predictions and a saliency map allowing users to visualize noteworthy image regions.",
+    tags: ["Machine Learning", "PyTorch", "FastAPI", "TypeScript", "Next.js", "Tailwind"],
     href: "https://github.com/r3men/geoguessr-game",
     live: "https://geoguessraivshuman.vercel.app/",
     screenshot: "/ai.png",
@@ -94,7 +94,7 @@ const projects: Project[] = [
   {
     title: "Geo-Tracker Simulator",
     description:
-      "A terminal-based simulator game for geography enthusiasts and cybersecurity lovers. Built using OOP principles, loops, arrays, methods, etc.",
+      "A terminal-based simulator game for geography enthusiasts and cybersecurity lovers to enjoy. The simulator serves as an interactive way to get students or other interested people a chance to learn more about the world and a little bit about the work of SOC analysts. Built using OOP principles, loops, arrays, methods, etc.",
     tags: ["Java", "OOP"],
     href: "https://github.com/r3men/JavaPortfolioProject",
     live: "",
