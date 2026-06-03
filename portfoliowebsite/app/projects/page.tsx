@@ -67,7 +67,7 @@ const projects: Project[] = [
     live: "https://mcstbusapp.vercel.app/",
     screenshot: "/mcstbusapp.png",
     status: "complete",
-    writeup: "",
+    writeup: "https://docs.google.com/document/d/1c3Wsm03k6VrnzNPb71R5lFOrS5b-IZ4gPRPAmn3mcSc/edit?tab=t.0",
   },
   {
     title: "GeoGuessr: Human vs. AI",
@@ -78,7 +78,7 @@ const projects: Project[] = [
     live: "https://geoguessraivshuman.vercel.app/",
     screenshot: "/ai.png",
     status: "complete",
-    writeup: "",
+    writeup: "https://docs.google.com/document/d/1c3Wsm03k6VrnzNPb71R5lFOrS5b-IZ4gPRPAmn3mcSc/edit?tab=t.qal59quq8aln",
   },
   {
     title: "InfoSTEM",
@@ -89,7 +89,7 @@ const projects: Project[] = [
     live: "https://info-stem.vercel.app/",
     screenshot: "/stem.png",
     status: "complete",
-    writeup: "",
+    writeup: "https://docs.google.com/document/d/1c3Wsm03k6VrnzNPb71R5lFOrS5b-IZ4gPRPAmn3mcSc/edit?tab=t.kj8lh4qeewo3",
   },
   {
     title: "Geo-Tracker Simulator",
@@ -100,7 +100,7 @@ const projects: Project[] = [
     live: "",
     screenshot: "/java.png",
     status: "complete",
-    writeup: "",
+    writeup: "https://docs.google.com/document/d/1c3Wsm03k6VrnzNPb71R5lFOrS5b-IZ4gPRPAmn3mcSc/edit?tab=t.cq3jdfseupgk",
   },
 ];
 // ────────────────────────────────────────────────────────────
