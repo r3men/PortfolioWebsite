@@ -83,7 +83,7 @@ const projects: Project[] = [
   {
     title: "InfoSTEM",
     description:
-      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application allows users to access a corresponding pathway based on their recommended career.",
+      "A web application designed to recommend STEM careers to high school students based on a survey utilizing a Likert scale. Application allows users to access a corresponding pathway based on their recommended career, assisting likeminded students in their pursuit of a specific STEM career through a formatted checklist for classes, secondary education opportunities, etc.",
     tags: ["TypeScript", "Tailwind", "Next.js"],
     href: "https://github.com/amongsusman/InfoSTEM",
     live: "https://info-stem.vercel.app/",
