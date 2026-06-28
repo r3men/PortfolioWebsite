@@ -11,7 +11,7 @@ type ContactMethod = {
 };
 
 const RESUME_URL = "/Resume.pdf";
-const RESUME_LAST_UPDATED = "May 2025";
+const RESUME_LAST_UPDATED = "June 2025";
 
 const contactMethods: ContactMethod[] = [
   {
